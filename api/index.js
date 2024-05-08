@@ -23,11 +23,6 @@ const handler = async(request, response) => {
         url: 'https://translation.googleapis.com/language/translate/v2?key=AIzaSyDGaUVMTrtCf9I2ehJ3Jym8o_nICCz0qm0',
         method: 'POST',
         data,
-        proxy: {
-          protocol: 'http',
-          host: '127.0.0.1',
-          port: 7890
-        },
       })
       return response.send(result.data)
     } catch (error) {
