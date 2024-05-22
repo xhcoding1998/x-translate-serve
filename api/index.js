@@ -18,6 +18,12 @@ const allowCors = fn => async (req, res) => {
 const handler = async(request, response) => {
   if(request.method === 'POST') {
     const data = request.body
+    if(data.sign !== '49e68de31139acb59f2f1d5ace1f9975') {
+      return response.send({
+        code: 500,
+        message: '密钥错误！'
+      })
+    }
     try {
       const result = await axios({
         url: 'https://translation.googleapis.com/language/translate/v2?key=AIzaSyDGaUVMTrtCf9I2ehJ3Jym8o_nICCz0qm0',
