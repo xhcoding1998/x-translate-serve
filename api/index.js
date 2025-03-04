@@ -26,7 +26,7 @@ const handler = async(request, response) => {
     }
     try {
       const result = await axios({
-        url: 'https://translation.googleapis.com/language/translate/v2?key=AIzaSyDGaUVMTrtCf9I2ehJ3Jym8o_nICCz0qm0',
+        url: 'https://translation.googleapis.com/language/translate/v2?key=AIzaSyAXMQOPhxnio84hZXRKU23JbEh9CPBPAaE',
         method: 'POST',
         data,
       })
